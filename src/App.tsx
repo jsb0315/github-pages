@@ -29,9 +29,9 @@ function App() {
               Tutorial
             </div>
             <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-slate-900 mb-6 leading-tight">
-              Github Page 배포하기
+              Github Pages로 Github.io 만들기
             </h1>
-            <h2 className="text-xl sm:text-2xl font-medium text-slate-600 mb-6">
+            <h2 className="text-2xl sm:text-3xl font-medium text-slate-600 mb-6">
               React + TypeScript + Vite + TailwindCSS
             </h2>
             <p className="text-lg text-slate-500 border-l-4 border-indigo-500 pl-4 italic">
@@ -177,7 +177,7 @@ function App() {
                 </div>
               </div>
 
-              <div className="group relative pl-8">
+              <div className="group relative pl-8 space-y-4">
                 <div className="absolute left-0 top-1.5 w-2 h-2 rounded-full bg-indigo-400 group-hover:scale-150 transition-transform"></div>
                 <h3 className="text-xl font-bold mb-4 text-slate-800">
                   6. package.json 수정
@@ -185,12 +185,35 @@ function App() {
                 <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm space-y-4">
                   <p className="text-slate-600 flex items-center gap-2">
                     <span className="text-indigo-500">1.</span>
-                    <code className="bg-slate-100 text-slate-800 px-2 py-1 rounded text-sm font-mono">"scripts"</code> 안에 <code className="bg-indigo-50 text-indigo-700 px-2 py-1 rounded text-sm font-mono border border-indigo-100">"deploy": "gh-pages -d dist"</code> 추가
+                    <code className="bg-slate-100 text-slate-800 px-2 py-1 rounded text-sm font-mono">"scripts"</code> 안에 <code className="bg-indigo-50 text-indigo-700 px-2 py-1 rounded text-sm font-mono border border-indigo-100">"deploy": "gh-pages -d dist"</code> 추가 (명령 편의성)
                   </p>
                   <p className="text-slate-600 flex items-center gap-2">
                     <span className="text-indigo-500">2.</span>
                     <code className="bg-indigo-50 text-indigo-700 px-2 py-1 rounded text-sm font-mono border border-indigo-100">"homepage": "https://깃허브아이디.github.io/레포이름"</code> 추가
                   </p>
+                </div>
+                <div className="bg-slate-900 rounded-xl overflow-hidden shadow-lg">
+                  <pre className="p-5 text-sm font-mono text-slate-300 overflow-x-auto">
+                    <code>{`{
+  ...
+  `}
+<span className="text-pink-400">"scripts"</span>{`: {
+    `}
+<span className="text-indigo-300">"dev"</span>{`: `}<span className="text-emerald-300">"vite"</span>{`,
+    `}
+<span className="text-indigo-300">"build"</span>{`: `}<span className="text-emerald-300">"tsc -b && vite build"</span>{`,
+    `}
+<span className="text-indigo-300">"lint"</span>{`: `}<span className="text-emerald-300">"eslint ."</span>{`,
+    `}
+<span className="text-indigo-300">"preview"</span>{`: `}<span className="text-emerald-300">"vite preview"</span>{`,
+    `}
+<span className="text-pink-400">"deploy"</span>{`: `}<span className="text-emerald-300">"gh-pages -d dist"</span>{`
+  },
+  `}
+<span className="text-pink-400">"homepage"</span>{`: `}<span className="text-emerald-300">"https://깃허브아이디.github.io/레포이름/"</span>{`,
+  ...
+}`}</code>
+                  </pre>
                 </div>
               </div>
             </div>
