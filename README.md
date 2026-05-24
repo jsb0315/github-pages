@@ -134,3 +134,11 @@ npm run deploy
 ## 🟣 [9] TailwindCSS 설치
 
 [공식 문서 (Vite 기준)](https://tailwindcss.com/docs/installation/using-vite) 따라하고 **푸시**
+
+---
+
+## 주의 !!
+
+빌드 시 `dist/html.html` 이 존재해야 함
+안되는 경우 1: vite.config.ts의 defineConfig - build에 lib 있을때 라이브러리 모드 켜져서 타입이랑 모듈만 생성함
+안되는 경우 2: vite.config.ts의 defineConfig - 최상위에 `base: '/github-pages/',` 있는지 확인 이거 왜안썻지
