@@ -99,10 +99,10 @@ npm install gh-pages --save-dev
 "deploy": "gh-pages -d dist"
 ```
 
-최상단에 추가:
+최상위에 추가:
 
 ```json
-"homepage": "https://깃허브아이디.github.io/레포이름",
+"homepage": "https://깃허브아이디.github.io/레포이름/",
 ```
 
 ---
